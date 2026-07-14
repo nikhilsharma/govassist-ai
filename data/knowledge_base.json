@@ -514,6 +514,55 @@
   ],
   "suggested_action": "Advise the Checker to use the Forward button and clearly record in the remarks that the payment is not recommended.",
   "draft_reply": "As per the current workflow, the Checker can only forward the payment. If the payment is not recommended, kindly use the Forward option and record the reasons in the remarks for the Approver's consideration."
+},
+{
+  "id": "mp-mobile-number-change",
+  "title": "MP Mobile Number Change Request",
+  "category": "Portal Access",
+  "description": "Use when a Member of Parliament requests change of the registered mobile number on the eSAKSHI portal.",
+  "stakeholder": "MPLADS Division",
+  "primary_stakeholder": "MPLADS Division",
+  "priority": "High",
+  "keywords": [
+    "mobile number",
+    "change mobile",
+    "otp not received",
+    "registered mobile",
+    "mp mobile",
+    "phone number"
+  ],
+  "verification_steps": [
+    "Verify that the request has been received from the official sansad email address.",
+    "Obtain approval of the competent authority (DDG MPLADS).",
+    "Update the registered mobile number after approval.",
+    "Inform the MP after successful updation."
+  ],
+  "suggested_action": "Process the mobile number change after verifying authenticity and obtaining approval from the competent authority.",
+  "draft_reply": "The request for change of registered mobile number has been received. After verification and approval of the competent authority, the registered mobile number will be updated."
+},
+{
+  "id": "authorization-limit-not-released",
+  "title": "Authorization Limit Not Released",
+  "category": "MPLADS Administration",
+  "description": "Use when an MP reports that the authorization limit is not available on the portal.",
+  "stakeholder": "MPLADS Division",
+  "primary_stakeholder": "MPLADS Division",
+  "priority": "High",
+  "keywords": [
+    "authorization limit",
+    "limit not released",
+    "fund limit",
+    "allocation",
+    "authorization"
+  ],
+  "verification_steps": [
+    "Verify the MP profile and authorization status.",
+    "Confirm that all mandatory onboarding formalities have been completed.",
+    "Check whether the authorization limit has already been released.",
+    "Coordinate with the concerned section if release is pending."
+  ],
+  "suggested_action": "Verify the authorization status and process the release of the authorization limit, if due.",
+  "draft_reply": "The authorization limit status is being verified. Necessary action will be taken after verification of the MP's eligibility and authorization records."
 }
   ]
 }

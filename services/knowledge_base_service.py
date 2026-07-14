@@ -5,9 +5,10 @@ from pathlib import Path
 
 class KnowledgeBaseService:
     DOMAIN_TERMS = (
-        "mplads esakshi pfms lgd vendor validation payment payments "
-        "beneficiary utr portal access local government directory"
-    )
+    "mplads esakshi pfms lgd vendor validation payment payments "
+    "beneficiary utr portal access local government directory "
+    "mp member parliament sansad mobile phone otp authorization limit allocation fund"
+)
 
     def __init__(self, source_path: Path):
         self.source_path = source_path
