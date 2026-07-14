@@ -47,10 +47,14 @@ function renderResults(analysis) {
       element.textContent = value || "Not specified";
     }
   });
-  fragment.querySelectorAll("[data-playbook-field]").forEach((element) => {
-    const playbook = analysis.matched_operational_playbook;
-    element.textContent = playbook?.[element.dataset.playbookField] || "No matching playbook found";
-  });
+  const playbook = analysis.matched_operational_playbook;
+  const playbookCard = fragment.querySelector("[data-playbook-card]");
+  playbookCard.hidden = !playbook;
+  if (playbook) {
+    fragment.querySelectorAll("[data-playbook-field]").forEach((element) => {
+      element.textContent = playbook[element.dataset.playbookField] || "Not specified";
+    });
+  }
   const copyButton = fragment.querySelector(".copy-button");
   copyButton.addEventListener("click", async () => {
     await navigator.clipboard.writeText(analysis.draft_official_reply || "");

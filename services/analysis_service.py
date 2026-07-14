@@ -35,14 +35,28 @@ class AnalysisService:
             )
             analysis = self._parse_response(response.output_text)
 
-        if matching_playbook and matching_playbook.get("draft_reply"):
+        if self._has_confirmed_playbook_match(analysis) and matching_playbook and matching_playbook.get("draft_reply"):
             analysis["draft_official_reply"] = matching_playbook["draft_reply"]
-        if matching_playbook:
+        if self._has_confirmed_playbook_match(analysis) and matching_playbook:
             analysis["matched_operational_playbook"] = {
                 "title": matching_playbook.get("title", ""),
                 "id": matching_playbook.get("id", ""),
             }
         return analysis
+
+    @staticmethod
+    def _has_confirmed_playbook_match(analysis: dict) -> bool:
+        category = (analysis.get("issue_category") or "").strip().lower()
+        summary = (analysis.get("summary") or "").strip().lower()
+        no_match_indicators = (
+            "no matching operational playbook",
+            "no matching kb entry",
+            "no suitable knowledge-base match",
+            "no suitable knowledge base match",
+            "no suitable operational playbook",
+            "outside the supported operational domain",
+        )
+        return bool(category) and not any(indicator in f"{category} {summary}" for indicator in no_match_indicators)
 
     @staticmethod
     def _no_matching_playbook_analysis() -> dict:
