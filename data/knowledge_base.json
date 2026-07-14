@@ -1,0 +1,519 @@
+{
+  "title": "Departmental Operational Knowledge Base",
+  "issue_playbooks": [
+    {
+      "id": "vendor-validation-pending",
+      "title": "Pending Vendor Validation Between eSAKSHI and PFMS",
+      "category": "Vendor Validation",
+      "description": "Use when a vendor validation request has been submitted through eSAKSHI but remains pending in PFMS beyond the expected processing period.",
+      "stakeholder": "Programme Finance Officer, PFMS Nodal Officer, and eSAKSHI support team",
+      "primary_stakeholder": "Programme Finance Officer, PFMS Nodal Officer, and eSAKSHI support team",
+      "priority": "High",
+      "keywords": ["vendor validation", "vendor", "validation pending", "eSAKSHI", "PFMS", "submitted", "48 hours", "beneficiary validation"],
+      "verification_steps": [
+        "Verify the vendor name, vendor code, request reference number, and submission date in eSAKSHI.",
+        "Confirm that the request status in eSAKSHI is successfully submitted and that all mandatory vendor details are complete.",
+        "Check the corresponding vendor validation status and any rejection remarks in PFMS.",
+        "Confirm whether the request has remained pending for more than 48 hours and capture supporting screenshots or references.",
+        "Escalate the verified case to the PFMS Nodal Officer with the eSAKSHI request reference."
+      ],
+      "suggested_action": "Raise a tracked escalation with the PFMS Nodal Officer, attaching the eSAKSHI submission reference and validation status. Monitor the case until PFMS validation is completed or a corrective action is provided.",
+      "draft_reply": "The vendor validation request has been verified as successfully submitted through eSAKSHI and is pending in PFMS. The matter has been escalated to the PFMS Nodal Officer for resolution. A further update will be shared after validation is completed."
+    },
+    {
+      "id": "lgd-mapping-mismatch",
+      "title": "LGD Mapping Mismatch or Unavailable Location Mapping",
+      "category": "LGD Mapping",
+      "description": "Use when a state, district, block, gram panchayat, urban local body, or other administrative unit cannot be selected, is mapped incorrectly, or differs across departmental systems.",
+      "stakeholder": "LGD Nodal Officer, State IT Cell, and concerned district administration",
+      "primary_stakeholder": "LGD Nodal Officer, State IT Cell, and concerned district administration",
+      "priority": "Medium",
+      "keywords": ["LGD", "local government directory", "mapping", "district", "block", "gram panchayat", "ULB", "location code", "administrative mapping"],
+      "verification_steps": [
+        "Record the exact administrative unit name, LGD code if available, and the affected portal or module.",
+        "Check the current LGD directory entry and verify the hierarchy from state to local body level.",
+        "Compare the LGD mapping shown in the departmental system with the verified LGD reference.",
+        "Identify whether the issue is a missing code, an outdated mapping, a merger or bifurcation, or a data synchronization delay.",
+        "Submit the verified discrepancy to the LGD Nodal Officer or State IT Cell for mapping correction."
+      ],
+      "suggested_action": "Log a mapping-correction request with the validated LGD hierarchy and affected system details. Hold dependent transactions only where the incorrect mapping prevents accurate processing.",
+      "draft_reply": "The reported LGD mapping issue is under verification with the concerned Nodal Officer and IT Cell. The required administrative details have been recorded for correction and synchronization. An update will be provided once the mapping is restored."
+    },
+    {
+      "id": "pfms-payment-pending",
+      "title": "PFMS Payment Pending, Failed, or Not Reflected",
+      "category": "PFMS / Payments",
+      "description": "Use when a payment initiated through PFMS remains pending, fails, is rejected, or is not reflected in the beneficiary or vendor account status.",
+      "stakeholder": "Drawing and Disbursing Officer, Programme Finance Officer, PFMS Nodal Officer, and bank liaison officer",
+      "primary_stakeholder": "Drawing and Disbursing Officer, Programme Finance Officer, PFMS Nodal Officer, and bank liaison officer",
+      "priority": "High",
+      "keywords": ["PFMS payment", "payment pending", "payment failed", "payment rejected", "transaction", "UTR", "beneficiary payment", "vendor payment", "bank account"],
+      "verification_steps": [
+        "Verify the scheme, sanction reference, payment file reference, beneficiary or vendor details, and transaction amount.",
+        "Check the PFMS transaction status, rejection remarks, payment date, and UTR or transaction reference where available.",
+        "Validate beneficiary or vendor bank account details and confirm that the account is active and correctly mapped.",
+        "Confirm whether the payment has been returned, failed at the bank stage, or is pending at an approval or authorization stage.",
+        "Record the verified status and route the case to the appropriate finance or PFMS authority for corrective action."
+      ],
+      "suggested_action": "Escalate failed or pending transactions with the complete payment reference and verified status. Where a correction is required, obtain authorized approval before reprocessing or re-initiating payment.",
+      "draft_reply": "The PFMS payment status has been taken up for verification with the concerned finance and PFMS authorities. The transaction reference and account details are being checked for the required corrective action. A status update will be issued after verification is completed."
+    },
+    {
+      "id": "portal-access-issue",
+      "title": "Departmental Portal Access, Login, or Role Issue",
+      "category": "Portal Access",
+      "description": "Use when an authorized officer cannot log in, reset a password, access a required module, or view functions assigned to their official role in a departmental portal.",
+      "stakeholder": "Departmental Portal Administrator, IT Helpdesk, and role-approving authority",
+      "primary_stakeholder": "Departmental Portal Administrator, IT Helpdesk, and role-approving authority",
+      "priority": "Medium",
+      "keywords": ["portal access", "login", "password", "OTP", "user ID", "role access", "module access", "account locked", "helpdesk"],
+      "verification_steps": [
+        "Verify the officer's official user ID, registered mobile number or email, department, and designated role.",
+        "Confirm the exact error message, affected portal module, date and time of the failed attempt, and browser or device details where relevant.",
+        "Check whether the account is active, locked, expired, or awaiting role approval or activation.",
+        "Confirm that the requested role and module access have been approved by the competent authority.",
+        "Raise a helpdesk ticket with the verified details and track the resolution reference."
+      ],
+      "suggested_action": "Route the verified request to the portal administrator or IT helpdesk for account restoration, password reset, or role provisioning. Retain the ticket reference and confirm access after resolution.",
+      "draft_reply": "Your portal access issue has been registered with the departmental IT helpdesk for verification. The account and role details will be checked, and the required access action will be taken in accordance with authorized role permissions."
+    },
+    {
+  "id": "vendor-validation-incorrect-bank-details",
+  "title": "Vendor Validation Failed due to Incorrect Bank Details",
+  "category": "Vendor Validation",
+  "description": "Use when vendor validation fails because the bank details submitted do not match the records available with PFMS.",
+  "stakeholder": "District Authority",
+  "primary_stakeholder": "District Authority",
+  "priority": "High",
+  "keywords": [
+    "vendor validation failed",
+    "incorrect IFSC",
+    "wrong account number",
+    "bank details mismatch",
+    "validation rejected"
+  ],
+  "verification_steps": [
+    "Verify the account number entered by the District Authority.",
+    "Verify the IFSC code entered.",
+    "Check the rejection remarks received from PFMS.",
+    "Confirm that the corrected bank details are available."
+  ],
+  "suggested_action": "Advise the District Authority to correct the bank details and submit the vendor for validation again.",
+  "draft_reply": "Vendor validation failed due to incorrect bank details. Kindly verify the account number and IFSC code, update the details and submit the vendor for validation again."
+},
+{
+  "id": "vendor-validation-ifsc-not-available",
+  "title": "IFSC Code Not Available in eSAKSHI",
+  "category": "Vendor Validation",
+  "description": "Use when the required IFSC code or bank is not available while registering a vendor in eSAKSHI.",
+  "stakeholder": "TCS",
+  "primary_stakeholder": "TCS",
+  "priority": "Medium",
+  "keywords": [
+    "IFSC missing",
+    "bank not available",
+    "bank master",
+    "IFSC code missing"
+  ],
+  "verification_steps": [
+    "Verify that the IFSC code is valid.",
+    "Confirm that the IFSC exists in PFMS.",
+    "Check that the IFSC is unavailable only in eSAKSHI."
+  ],
+  "suggested_action": "Request TCS to update the bank master so that the IFSC becomes available for vendor registration.",
+  "draft_reply": "The required IFSC code is not available in the eSAKSHI bank master. The matter has been referred to TCS for updating the bank master."
+},
+{
+  "id": "vendor-validation-vendor-already-exists",
+  "title": "Vendor Already Exists in PFMS",
+  "category": "Vendor Validation",
+  "description": "Use when vendor registration fails because PFMS reports that the vendor already exists.",
+  "stakeholder": "PFMS / TCS",
+  "primary_stakeholder": "PFMS / TCS",
+  "priority": "Medium",
+  "keywords": [
+    "vendor already exists",
+    "duplicate vendor",
+    "PFMS vendor exists"
+  ],
+  "verification_steps": [
+    "Obtain the Batch ID.",
+    "Verify the PFMS response.",
+    "Forward the Batch ID to TCS for coordination with PFMS."
+  ],
+  "suggested_action": "Coordinate with PFMS through TCS using the Batch ID for resolution.",
+  "draft_reply": "The vendor already exists in the PFMS database. The Batch ID has been shared with the PFMS backend team through TCS for necessary action."
+},
+{
+  "id": "vendor-validation-pfms-technical-error",
+  "title": "Vendor Validation Failed due to PFMS Technical Error",
+  "category": "Vendor Validation",
+  "description": "Use when vendor validation fails because of a technical error returned by PFMS.",
+  "stakeholder": "PFMS / TCS",
+  "primary_stakeholder": "PFMS / TCS",
+  "priority": "High",
+  "keywords": [
+    "PFMS technical error",
+    "validation error",
+    "backend error",
+    "vendor validation technical failure"
+  ],
+  "verification_steps": [
+    "Obtain the Batch ID.",
+    "Verify the PFMS error message.",
+    "Forward the details to TCS for escalation to PFMS."
+  ],
+  "suggested_action": "Coordinate with TCS and PFMS backend for investigation and resolution.",
+  "draft_reply": "Vendor validation could not be completed due to a technical error at PFMS. The Batch ID has been shared with the PFMS backend team through TCS for resolution."
+},
+{
+  "id": "lgd-village-not-available",
+  "title": "Village or Ward Not Available in eSAKSHI",
+  "category": "LGD Mapping",
+  "description": "Use when a village or ward is not available in eSAKSHI while recommending a work.",
+  "stakeholder": "LGD / TCS / District Authority",
+  "primary_stakeholder": "District Authority",
+  "priority": "High",
+  "keywords": [
+    "village not available",
+    "ward not available",
+    "LGD village missing",
+    "missing village",
+    "village not shown"
+  ],
+  "verification_steps": [
+    "Verify whether the village or ward exists in the LGD portal under the concerned Sub-District.",
+    "If available in LGD, request TCS to synchronize the latest LGD data in eSAKSHI.",
+    "If not available in LGD, advise the District Authority to update LGD and inform MPLADS Division.",
+    "Issue a D.O. letter to the MP wherever required."
+  ],
+  "suggested_action": "Verify the village in LGD. If present, coordinate with TCS for synchronization. Otherwise advise the District Authority to update LGD before synchronization.",
+  "draft_reply": "The reported village/ward is being verified in the LGD database. Necessary action has been initiated with TCS or the concerned District Authority, as applicable."
+},
+{
+  "id": "lgd-ac-pc-mapping",
+  "title": "Incorrect Assembly or Parliamentary Constituency Mapping",
+  "category": "LGD Mapping",
+  "description": "Use when an incorrect Assembly Constituency (AC) or Parliamentary Constituency (PC) is displayed after selecting a village or local body.",
+  "stakeholder": "LGD / TCS",
+  "primary_stakeholder": "LGD",
+  "priority": "High",
+  "keywords": [
+    "wrong AC",
+    "wrong PC",
+    "incorrect constituency",
+    "AC PC mapping",
+    "constituency mismatch"
+  ],
+  "verification_steps": [
+    "Verify the AC and PC mapping in the LGD portal.",
+    "If LGD mapping is correct, request TCS to synchronize the mapping in eSAKSHI.",
+    "If LGD mapping is incorrect, advise the District Authority to update the LGD database."
+  ],
+  "suggested_action": "Verify the mapping in LGD and coordinate with TCS or the District Authority depending upon the source of the discrepancy.",
+  "draft_reply": "The Assembly and Parliamentary Constituency mapping is under verification. Necessary corrections will be carried out after verification of the LGD records."
+},
+{
+  "id": "lgd-village-wrong-district",
+  "title": "Village Displayed Under Incorrect District",
+  "category": "LGD Mapping",
+  "description": "Use when a village is displayed under an incorrect district in eSAKSHI.",
+  "stakeholder": "LGD / TCS",
+  "primary_stakeholder": "LGD",
+  "priority": "High",
+  "keywords": [
+    "wrong district",
+    "village in another district",
+    "incorrect district mapping",
+    "district mismatch"
+  ],
+  "verification_steps": [
+    "Verify the district mapping in the LGD portal.",
+    "If the mapping is correct in LGD, request TCS to synchronize the latest data.",
+    "If the mapping is incorrect in LGD, advise the District Authority to update the LGD records."
+  ],
+  "suggested_action": "Verify the district mapping in LGD and initiate synchronization or correction as applicable.",
+  "draft_reply": "The reported district mapping is under verification. Necessary action will be taken after verification of the LGD records."
+},
+{
+  "id": "lgd-district-not-visible",
+  "title": "District Not Available for MP",
+  "category": "LGD Mapping",
+  "description": "Use when a district falling under an MP's Parliamentary Constituency is not available in eSAKSHI.",
+  "stakeholder": "MPLADS Division",
+  "primary_stakeholder": "MPLADS Division",
+  "priority": "Medium",
+  "keywords": [
+    "district not available",
+    "district missing",
+    "MP district",
+    "district mapping"
+  ],
+  "verification_steps": [
+    "Verify the Parliamentary Constituency to District mapping maintained in MPLADS.",
+    "Confirm the jurisdiction from the concerned Nodal District Authority.",
+    "Update the mapping if required."
+  ],
+  "suggested_action": "Verify the Parliamentary Constituency mapping and update the portal after confirmation from the concerned Nodal District.",
+  "draft_reply": "The Parliamentary Constituency and District mapping is being verified. Necessary updates will be carried out after confirmation from the concerned District Authority."
+},
+{
+  "id": "lgd-new-district-created",
+  "title": "New District Created or District Reorganized",
+  "category": "LGD Mapping",
+  "description": "Use when a newly created district or a district affected by reorganization is not reflected in eSAKSHI.",
+  "stakeholder": "District Authority / LGD / TCS",
+  "primary_stakeholder": "District Authority",
+  "priority": "Medium",
+  "keywords": [
+    "new district",
+    "district created",
+    "district merged",
+    "district bifurcation",
+    "district reorganization"
+  ],
+  "verification_steps": [
+    "Verify whether the District Authority has updated the latest administrative changes in LGD.",
+    "Obtain confirmation from the concerned District Authority.",
+    "Request TCS to synchronize the updated LGD data in eSAKSHI."
+  ],
+  "suggested_action": "Advise the District Authority to update LGD and, after confirmation, coordinate with TCS to synchronize the revised administrative structure.",
+  "draft_reply": "The administrative changes relating to the district are under verification. Necessary synchronization will be carried out after confirmation of the updated LGD records."
+},
+{
+  "id": "pfms-holding-account-not-mapped",
+  "title": "Holding Account Not Mapped by Implementing Agency",
+  "category": "PFMS / Payments",
+  "description": "Use when a payment batch fails because the Holding Account has not been mapped by the Implementing Agency (IA) in PFMS.",
+  "stakeholder": "Implementing Agency",
+  "primary_stakeholder": "Implementing Agency",
+  "priority": "High",
+  "keywords": [
+    "holding account not mapped",
+    "holding account",
+    "payment batch failed",
+    "IA holding account",
+    "PFMS holding account"
+  ],
+  "verification_steps": [
+    "Verify the PFMS error message.",
+    "Confirm that the Holding Account has not been mapped in the IA's PFMS login.",
+    "Verify whether the prescribed SOP has been followed."
+  ],
+  "suggested_action": "Advise the Implementing Agency to map the Holding Account in PFMS as per the prescribed SOP and reinitiate the payment.",
+  "draft_reply": "The payment could not be processed because the Holding Account has not been mapped in PFMS. Kindly complete the Holding Account mapping as per the prescribed SOP and initiate the payment again."
+},
+{
+  "id": "pfms-account-not-tsa-hybrid",
+  "title": "Implementing Agency Account Not Marked as TSA Hybrid",
+  "category": "PFMS / Payments",
+  "description": "Use when a payment batch fails because the Implementing Agency account has not been configured as TSA Hybrid in PFMS.",
+  "stakeholder": "Implementing Agency",
+  "primary_stakeholder": "Implementing Agency",
+  "priority": "High",
+  "keywords": [
+    "TSA Hybrid",
+    "account not marked",
+    "TSA flag",
+    "Hybrid 1A",
+    "PFMS configuration"
+  ],
+  "verification_steps": [
+    "Verify the PFMS error message.",
+    "Confirm that the Implementing Agency account is configured as TSA Hybrid.",
+    "Verify whether the prescribed SOP has been followed."
+  ],
+  "suggested_action": "Advise the Implementing Agency to mark the account as TSA Hybrid in PFMS as per the prescribed SOP before retrying the payment.",
+  "draft_reply": "The payment could not be processed because the Implementing Agency account is not configured as TSA Hybrid in PFMS. Kindly complete the configuration and initiate the payment again."
+},
+{
+  "id": "pfms-cna-linkage-missing",
+  "title": "CNA Linkage Not Available",
+  "category": "PFMS / Payments",
+  "description": "Use when a payment batch fails because the CNA account has not been linked in PFMS.",
+  "stakeholder": "Implementing Agency",
+  "primary_stakeholder": "Implementing Agency",
+  "priority": "High",
+  "keywords": [
+    "CNA linkage",
+    "CNA account",
+    "payment source",
+    "linked account missing",
+    "PFMS CNA"
+  ],
+  "verification_steps": [
+    "Verify the PFMS error message.",
+    "Confirm whether the CNA account linkage exists in PFMS.",
+    "Verify whether the prescribed SOP has been followed."
+  ],
+  "suggested_action": "Advise the Implementing Agency to complete the CNA linkage in PFMS as per the prescribed SOP before initiating the payment again.",
+  "draft_reply": "The payment could not be processed because the CNA account linkage is missing in PFMS. Kindly complete the CNA linkage as per the prescribed SOP and initiate the payment again."
+},
+{
+  "id": "pfms-payment-ifsc-mismatch",
+  "title": "Payment Failed Due to IFSC Code Mismatch",
+  "category": "PFMS / Payments",
+  "description": "Use when a payment transaction is rejected because the vendor's IFSC code has changed after vendor validation.",
+  "stakeholder": "District Authority / PFMS / TCS",
+  "primary_stakeholder": "District Authority",
+  "priority": "High",
+  "keywords": [
+    "IFSC mismatch",
+    "payment rejected",
+    "vendor payment failed",
+    "bank branch changed",
+    "rollback transaction"
+  ],
+  "verification_steps": [
+    "Verify the PFMS rejection reason.",
+    "Confirm that the vendor's IFSC code has changed.",
+    "Coordinate with TCS to get the transaction rolled back through PFMS.",
+    "Advise the District Authority to update the vendor details and revalidate the vendor."
+  ],
+  "suggested_action": "Get the transaction rolled back through PFMS, update the vendor details, complete vendor revalidation and submit the payment again.",
+  "draft_reply": "The payment has been rejected because of a mismatch in the vendor's bank details. The transaction is being rolled back through PFMS. Kindly update the vendor details, complete vendor validation again and resubmit the payment."
+},
+{
+  "id": "pfms-vendor-not-active",
+  "title": "Vendor Not Active in PFMS",
+  "category": "PFMS / Payments",
+  "description": "Use when a payment transaction is rejected because the vendor is inactive in PFMS.",
+  "stakeholder": "District Authority / PFMS / TCS",
+  "primary_stakeholder": "District Authority",
+  "priority": "High",
+  "keywords": [
+    "vendor inactive",
+    "vendor not active",
+    "inactive vendor",
+    "payment rejected",
+    "vendor status"
+  ],
+  "verification_steps": [
+    "Verify the PFMS rejection message.",
+    "Confirm the vendor status in PFMS.",
+    "Coordinate with TCS to get the transaction rolled back through PFMS.",
+    "Advise the District Authority to activate or correct the vendor details and complete vendor validation again."
+  ],
+  "suggested_action": "Coordinate with PFMS through TCS for rollback of the transaction. Update the vendor details if required, complete vendor validation again and resubmit the payment.",
+  "draft_reply": "The payment could not be processed because the vendor is inactive in PFMS. After rollback of the transaction, kindly complete vendor validation again and initiate the payment."
+},
+{
+  "id": "portal-login-password-reset",
+  "title": "User Unable to Login or Complete Password Reset",
+  "category": "Portal Access",
+  "description": "Use when a user is unable to login to eSAKSHI or is confused during the password reset process.",
+  "stakeholder": "Portal User",
+  "primary_stakeholder": "Portal User",
+  "priority": "Medium",
+  "keywords": [
+    "login failed",
+    "forgot password",
+    "OTP",
+    "password reset",
+    "unable to login",
+    "old password"
+  ],
+  "verification_steps": [
+    "Verify the registered mobile number of the user.",
+    "Advise the user to use the 'Forgot Password' option.",
+    "Inform the user that the OTP received becomes the temporary password.",
+    "Inform the user that while changing the password, the same OTP must be entered again as the old password."
+  ],
+  "suggested_action": "Guide the user through the password reset workflow and explain the OTP-based password change process.",
+  "draft_reply": "Please use the 'Forgot Password' option. The OTP received on your registered mobile number acts as your temporary password. While changing the password, enter the same OTP again when prompted for the old password before creating a new password."
+},
+{
+  "id": "portal-checker-forward-button-missing",
+  "title": "Checker Unable to View Forward Button",
+  "category": "Portal Access",
+  "description": "Use when the Checker user is unable to view the Forward button required to forward payment files to the Approver.",
+  "stakeholder": "IDA Main User",
+  "primary_stakeholder": "IDA Main User",
+  "priority": "High",
+  "keywords": [
+    "forward button missing",
+    "checker role",
+    "worklist group",
+    "payment checker",
+    "role group"
+  ],
+  "verification_steps": [
+    "Verify that the user has been assigned the Checker role.",
+    "Verify whether the Worklist Group has been assigned to the user.",
+    "Confirm that the IDA Main user has configured the appropriate Role Group."
+  ],
+  "suggested_action": "Advise the IDA Main user to assign the required Worklist Group to the Checker through the Role Group configuration.",
+  "draft_reply": "The Checker is unable to view the Forward button because the required Worklist Group has not been assigned. Kindly request the IDA Main user to update the Role Group configuration."
+},
+{
+  "id": "portal-payment-hierarchy-not-configured",
+  "title": "Payment Hierarchy Not Configured",
+  "category": "Portal Access",
+  "description": "Use when a user receives a 'Payment Hierarchy Not Configured' error while initiating payment.",
+  "stakeholder": "Implementing Agency",
+  "primary_stakeholder": "Implementing Agency",
+  "priority": "High",
+  "keywords": [
+    "payment hierarchy",
+    "hierarchy not configured",
+    "fund disbursement",
+    "IA Maker",
+    "payment initiation"
+  ],
+  "verification_steps": [
+    "Verify the payment hierarchy configured for the Implementing Agency.",
+    "Identify the designated IA Maker user.",
+    "Confirm whether payment is being initiated using the IA Maker account."
+  ],
+  "suggested_action": "Advise the user to initiate payment from the designated IA Maker account instead of another role.",
+  "draft_reply": "The payment hierarchy permits only the designated IA Maker to initiate payment. Kindly log in using the IA Maker account and initiate the payment again."
+},
+{
+  "id": "portal-mp-mobile-number-change",
+  "title": "MP Mobile Number Change or OTP Issue",
+  "category": "Portal Access",
+  "description": "Use when an MP requests a change in the registered mobile number or reports not receiving OTPs.",
+  "stakeholder": "MPLADS Division",
+  "primary_stakeholder": "MPLADS Division",
+  "priority": "Medium",
+  "keywords": [
+    "mobile number change",
+    "OTP not received",
+    "registered mobile",
+    "Sansad email",
+    "DDG approval"
+  ],
+  "verification_steps": [
+    "Verify that the request has been received from the official Sansad email address.",
+    "Verify the currently registered mobile number.",
+    "Obtain approval from the competent authority.",
+    "Update the mobile number after approval."
+  ],
+  "suggested_action": "Process the request only after verification of the official email and approval from the competent authority.",
+  "draft_reply": "The request for change of registered mobile number will be processed after verification of the request received from the official Sansad email address and approval of the competent authority."
+},
+{
+  "id": "portal-checker-payment-rejection",
+  "title": "Checker Wants to Reject Payment",
+  "category": "Portal Access",
+  "description": "Use when a Checker user wants to reject a payment but the portal provides only the Forward option.",
+  "stakeholder": "Checker User",
+  "primary_stakeholder": "Checker User",
+  "priority": "Low",
+  "keywords": [
+    "reject payment",
+    "checker",
+    "forward only",
+    "payment remarks",
+    "payment recommendation"
+  ],
+  "verification_steps": [
+    "Verify that the user has been assigned the Checker role.",
+    "Confirm that the workflow provides only the Forward action.",
+    "Advise the user to record the recommendation in the remarks section."
+  ],
+  "suggested_action": "Advise the Checker to use the Forward button and clearly record in the remarks that the payment is not recommended.",
+  "draft_reply": "As per the current workflow, the Checker can only forward the payment. If the payment is not recommended, kindly use the Forward option and record the reasons in the remarks for the Approver's consideration."
+}
+  ]
+}

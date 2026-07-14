@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GovAssist AI | Government Operational Issue Resolution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <nav class="nav"><a class="brand" href="/"><span class="brand-mark">G</span>GovAssist <em>AI</em></a><span class="nav-note">Officer workspace</span></nav>
+    <section class="hero">
+      <p class="eyebrow">AI Government Operational Issue Resolution Assistant</p>
+      <h1>Turn Government Operational Issues into <span>clear action briefs.</span></h1>
+      <p class="lede">Submit a Government Operational Issue to generate a structured, review-ready assessment using the Departmental Operational Knowledge Base.</p>
+    </section>
+    <section class="workspace" aria-label="Issue analysis">
+      <div class="input-panel">
+        <div class="panel-heading"><div><p class="section-label">Issue submission</p><h2>What requires departmental action?</h2></div><span class="secure">Department Knowledge Loaded</span></div>
+        <label for="issue">Government Operational Issue</label>
+        <textarea id="issue" maxlength="8000" placeholder="Vendor validation has remained pending in PFMS for more than 48 hours although the request has been successfully submitted from eSAKSHI."></textarea>
+        <div class="input-footer"><span id="counter">0 / 8,000</span><button id="analyze" type="button"><span>Analyze Issue</span><span aria-hidden="true">→</span></button></div>
+        <p id="message" class="message" role="status"></p>
+      </div>
+      <div class="results-panel" id="results-panel">
+        <div class="empty-state" id="empty-state"><div class="empty-icon">✦</div><h2>Government Operational Issue analysis will appear here</h2><p>You will receive a structured decision-support brief with verification steps and recommended departmental action.</p></div>
+        <div id="results" hidden></div>
+      </div>
+    </section>
+    <p class="disclaimer">AI provides decision support only. Officers must review the analysis and draft reply before taking or communicating official action.</p>
+  </main>
+  <template id="results-template">
+    <div class="result-header"><p class="section-label">Government operational issue brief</p><span class="status-pill">Ready for officer review</span></div>
+    <div class="result-grid">
+      <article class="result-card"><p>Issue category</p><h3 data-field="issue_category"></h3></article>
+      <article class="result-card"><p>Relevant stakeholder</p><h3 data-field="relevant_stakeholder"></h3></article>
+    </div>
+    <article class="wide-card"><p>Summary</p><div data-field="summary"></div></article>
+    <article class="wide-card"><p>Matched Operational Playbook</p><div data-playbook-field="title"></div><div data-playbook-field="id"></div></article>
+    <article class="wide-card"><p>Verification steps</p><ol data-field="verification_steps"></ol></article>
+    <article class="wide-card action-card"><p>Suggested action</p><div data-field="suggested_action"></div></article>
+    <article class="wide-card reply-card"><div class="reply-title"><p>Draft official reply</p><button class="copy-button" type="button">Copy</button></div><div data-field="draft_official_reply" class="reply-text"></div></article>
+  </template>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
