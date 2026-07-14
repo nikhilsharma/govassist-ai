@@ -10,6 +10,9 @@ class AnalysisService:
         self.knowledge_base = knowledge_base
 
     def analyze(self, issue_text: str) -> dict:
+        if not self.knowledge_base.is_supported_domain(issue_text):
+            return self._no_matching_playbook_analysis()
+
         matching_playbook = self.knowledge_base.find_matching_playbook(issue_text)
         context = self.knowledge_base.relevant_context(issue_text)
         if not self.client:
@@ -40,6 +43,20 @@ class AnalysisService:
                 "id": matching_playbook.get("id", ""),
             }
         return analysis
+
+    @staticmethod
+    def _no_matching_playbook_analysis() -> dict:
+        return {
+            "issue_category": "No Matching Operational Playbook",
+            "summary": "The submitted issue is outside the supported MPLADS operational domain.",
+            "relevant_stakeholder": "N/A",
+            "verification_steps": ["No matching operational playbook found for the submitted issue."],
+            "suggested_action": "Please submit an issue related to the supported MPLADS operational workflows.",
+            "draft_official_reply": (
+                "This prototype currently supports MPLADS operational issues only. "
+                "No suitable operational playbook was found for the submitted issue."
+            ),
+        }
 
     @staticmethod
     def _parse_response(output_text: str) -> dict:

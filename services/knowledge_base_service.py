@@ -4,6 +4,11 @@ from pathlib import Path
 
 
 class KnowledgeBaseService:
+    DOMAIN_TERMS = (
+        "mplads esakshi pfms lgd vendor validation payment payments "
+        "beneficiary utr portal access local government directory"
+    )
+
     def __init__(self, source_path: Path):
         self.source_path = source_path
 
@@ -32,6 +37,10 @@ class KnowledgeBaseService:
 
         best_match = max(entries, key=score, default=None)
         return best_match if best_match and score(best_match) > 0 else None
+
+    def is_supported_domain(self, issue_text: str) -> bool:
+        supported_terms = self._terms(self.DOMAIN_TERMS)
+        return bool(self._terms(issue_text) & supported_terms)
 
     @staticmethod
     def _terms(text: str) -> set[str]:
